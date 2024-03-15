@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 420px;
+  height: 100vh;
+  max-height: 745px;
+  margin: 0 auto;
+  background-color: red;
+}
+h1 {
+  font-size: 35px;
+  text-align: center;
+  padding: 20px;
+}
+.start-text {
+  font-size: 26px;
+  text-align: center;
+  padding: 20px;
+}
+.group-btn {
+  display: flex;
+  width: 100%;
+  button img {
+    width: 100%;
+  }
+}
+.result {
+  height: 50%;
+}
