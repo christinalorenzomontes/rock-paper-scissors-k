@@ -20,7 +20,7 @@ paperBtn.addEventListener( 'click', () => { play( paper ) });
 scissorsBtn.addEventListener( 'click', () => { play( scissors ) });
 
 const play = ( userOption ) => {
-  if(isPlaying) return;
+  if( isPlaying ) return;
 
   isPlaying = true;
 
@@ -31,18 +31,18 @@ const play = ( userOption ) => {
   const interval = setInterval( () => {
     const machineOption = calcMachineOption();
     machineImg.src = "img/" + machineOption + ".svg";
-  }, 200);
+  }, 200 );
 
-  setTimeout(() => {
+  setTimeout( () => {
 
-    clearInterval(interval);
+    clearInterval( interval );
 
     const machineOption = calcMachineOption();
     const result = calcResult(userOption, machineOption);
 
     machineImg.src = "img/" + machineOption + ".svg";
 
-    switch (result) {
+    switch ( result ) {
       case tie:
         resultText.innerHTML = "Empate";
         break;
@@ -54,13 +54,13 @@ const play = ( userOption ) => {
         break;
     }
     isPlaying = false;
-  }, 2000);
+  }, 2000 );
 }
 
 const  calcMachineOption = () => {
   const number = Math.floor( Math.random() * 3 );
 
-  switch (number) {
+  switch ( number ) {
     case 0:
       return rock;
     case 1:
